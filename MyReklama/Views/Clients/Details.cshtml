@@ -5,17 +5,18 @@
 <!DOCTYPE html>
 
 <html>
+<h4>Информация о клиенте</h4>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
 </head>
 <body>
     <div>
-        <h4>Client</h4>
+        
         <hr />
         <dl class="dl-horizontal">
             <dt>
-                @Html.DisplayNameFor(model => model.FIO)
+                ФИО клиента
             </dt>
     
             <dd>
@@ -23,7 +24,7 @@
             </dd>
     
             <dt>
-                @Html.DisplayNameFor(model => model.NameCompany)
+               Наименование компании
             </dt>
     
             <dd>
@@ -31,7 +32,7 @@
             </dd>
     
             <dt>
-                @Html.DisplayNameFor(model => model.Adres)
+               Адрес
             </dt>
     
             <dd>
@@ -39,7 +40,7 @@
             </dd>
     
             <dt>
-                @Html.DisplayNameFor(model => model.Tel)
+               Номер телефона
             </dt>
     
             <dd>
@@ -47,7 +48,7 @@
             </dd>
     
             <dt>
-                @Html.DisplayNameFor(model => model.City)
+                Город
             </dt>
     
             <dd>
@@ -55,7 +56,7 @@
             </dd>
     
             <dt>
-                @Html.DisplayNameFor(model => model.Index)
+                Индекс
             </dt>
     
             <dd>
@@ -65,8 +66,8 @@
         </dl>
     </div>
     <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-        @Html.ActionLink("Back to List", "Index")
+        @Html.ActionLink("Изменить", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Назад", "Index")
     </p>
 </body>
 </html>

@@ -4,28 +4,29 @@
 <!DOCTYPE html>
 
 <html>
+<h3>Наши работники</h3>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
 </head>
 <body>
     <p>
-        @Html.ActionLink("Create New", "Create")
+        @Html.ActionLink("Добавить нового работника", "Create")
     </p>
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.FIO)
+               ФИО работника
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Adres)
+             Адрес
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Tel)
+               Номер телефона
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.NumberOrder)
-            </th>
+            </th>*@
             <th></th>
         </tr>
     
@@ -40,13 +41,13 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Tel)
             </td>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.NumberOrder)
-            </td>
+            </td>*@
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+                @Html.ActionLink("Изменить", "Edit", new { id=item.Id }) |
+                @*@Html.ActionLink("Details", "Details", new { id=item.Id }) |*@
+                @Html.ActionLink("Удалить", "Delete", new { id=item.Id })
             </td>
         </tr>
     }

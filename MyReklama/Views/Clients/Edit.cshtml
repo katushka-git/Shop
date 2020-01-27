@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 
 <html>
+<h4>Редактирование данных о клиенте</h4>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Edit</title>
@@ -15,13 +16,13 @@
         @Html.AntiForgeryToken()
         
         <div class="form-horizontal">
-            <h4>Client</h4>
+           
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             @Html.HiddenFor(model => model.Id)
     
             <div class="form-group">
-                @Html.LabelFor(model => model.FIO, htmlAttributes: new { @class = "control-label col-md-2" })
+                <span class="control-label col-md-2 ">ФИО </span>
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.FIO, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.FIO, "", new { @class = "text-danger" })
@@ -29,7 +30,7 @@
             </div>
     
             <div class="form-group">
-                @Html.LabelFor(model => model.NameCompany, htmlAttributes: new { @class = "control-label col-md-2" })
+                <span class="control-label col-md-2 ">Наименование компании </span>
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.NameCompany, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.NameCompany, "", new { @class = "text-danger" })
@@ -37,7 +38,7 @@
             </div>
     
             <div class="form-group">
-                @Html.LabelFor(model => model.Adres, htmlAttributes: new { @class = "control-label col-md-2" })
+                <span class="control-label col-md-2 ">Адрес </span>
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.Adres, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.Adres, "", new { @class = "text-danger" })
@@ -45,7 +46,7 @@
             </div>
     
             <div class="form-group">
-                @Html.LabelFor(model => model.Tel, htmlAttributes: new { @class = "control-label col-md-2" })
+                <span class="control-label col-md-2 ">Номер телефона </span>
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.Tel, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.Tel, "", new { @class = "text-danger" })
@@ -53,7 +54,7 @@
             </div>
     
             <div class="form-group">
-                @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label col-md-2" })
+                <span class="control-label col-md-2 ">Город </span>
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
@@ -61,7 +62,7 @@
             </div>
     
             <div class="form-group">
-                @Html.LabelFor(model => model.Index, htmlAttributes: new { @class = "control-label col-md-2" })
+                <span class="control-label col-md-2 ">Индекс</span>
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.Index, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.Index, "", new { @class = "text-danger" })
@@ -70,14 +71,14 @@
     
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Save" class="btn btn-default" />
+                    <input type="submit" value="Сохранить" class="btn btn-default" />
                 </div>
             </div>
         </div>
     }
     
     <div>
-        @Html.ActionLink("Back to List", "Index")
+        @Html.ActionLink("Назад", "Index")
     </div>
 </body>
 </html>
