@@ -196,12 +196,11 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\ReportController.cs" />
-    <Compile Include="Controllers\StatisticaController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Logic\ForCreateOreder.cs" />
-    <Compile Include="Logic\Statistic.cs" />
     <Compile Include="Migrations\202001271120469_m1.cs" />
     <Compile Include="Migrations\202001271120469_m1.Designer.cs">
       <DependentUpon>202001271120469_m1.cs</DependentUpon>
