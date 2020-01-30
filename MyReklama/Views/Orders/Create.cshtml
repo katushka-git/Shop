@@ -7,7 +7,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Create</title>
+    <title></title>
 </head>
 <body>
     @using (Html.BeginForm()) 
@@ -15,11 +15,11 @@
         @Html.AntiForgeryToken()
         
         <div class="form-horizontal">
-            <h4>Order</h4>
+            <h4>Создание заказа</h4>
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             <div class="form-group">
-                @Html.LabelFor(model => model.DateOrder, htmlAttributes: new { @class = "control-label col-md-2" })
+                <span class="control-label col-md-2">Дата</span>    
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.DateOrder, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.DateOrder, "", new { @class = "text-danger" })
@@ -27,24 +27,21 @@
             </div>
     
             <div class="form-group">
-                @Html.LabelFor(model => model.ClientId, "ClientId", htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
+                <span class="control-label col-md-2">Клиент </span>                <div class="col-md-10">
                     @Html.DropDownList("ClientId", null, htmlAttributes: new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.ClientId, "", new { @class = "text-danger" })
                 </div>
             </div>
     
             <div class="form-group">
-                @Html.LabelFor(model => model.EmployeeId, "EmployeeId", htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
+                <span class="control-label col-md-2">Работник</span>                <div class="col-md-10">
                     @Html.DropDownList("EmployeeId", null, htmlAttributes: new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.EmployeeId, "", new { @class = "text-danger" })
                 </div>
             </div>
     
             <div class="form-group">
-                @Html.LabelFor(model => model.ServiceId, "ServiceId", htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
+                <span class="control-label col-md-2">Услуга </span>                <div class="col-md-10">
                     @Html.DropDownList("ServiceId", null, htmlAttributes: new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.ServiceId, "", new { @class = "text-danger" })
                 </div>
@@ -52,14 +49,14 @@
     
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-default" />
+                    <input type="submit" value="Создать" class="btn btn-default" />
                 </div>
             </div>
         </div>
     }
     
     <div>
-        @Html.ActionLink("Back to List", "Index")
+        @Html.ActionLink("Назад", "Index")
     </div>
 </body>
 </html>
