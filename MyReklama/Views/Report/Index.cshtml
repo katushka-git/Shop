@@ -1,17 +1,43 @@
-﻿
-<!DOCTYPE html>
+﻿@using MyReklama.Models.View;
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>View</title>
-</head>
-<body>
-    <div> 
-      
+@model ServiceView
 
-        
-            
-    </div>
-</body>
-</html>
+@{
+
+    ViewBag.Title = "Index";
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>Количество оказанных услуг</h2>
+
+@foreach (var item in Model.serviceList)
+
+{
+
+    <div>@item.Name - @item.Count</div>
+
+}
+
+<h2>Клиенты заказавшие больше услуг</h2>
+
+@foreach (var item in Model.clientList)
+
+{
+
+    <div>@item.Name - @item.Count</div>
+
+}
+
+<h2>Работники оказавшие больше услуг</h2>
+
+@foreach (var item in Model.userList)
+
+{
+
+    <div>@item.Name - @item.Count</div>
+
+}
+
+<h2>Index</h2>

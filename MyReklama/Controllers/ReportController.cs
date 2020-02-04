@@ -11,9 +11,11 @@ namespace MyReklama.Controllers
     public class ReportController : Controller
     {
         // GET: Report
+       
 
         private MyAppContext db = new MyAppContext();
-        public async Task<ActionResult> CountService() {
+        public async Task<ActionResult> CountService()
+        {
             var result = db.Orders.GroupBy(item1 => item1.Service).Select(item => new { Name = item.Key.Name, Count = item.Count() }).ToList();
             return View(result);
         }
@@ -23,4 +25,5 @@ namespace MyReklama.Controllers
             return View();
         }
     }
+    
 }
