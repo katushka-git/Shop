@@ -6,6 +6,7 @@ using System.Web;
 
 namespace MyReklama.Models.View
 {
+
     public class ServiceView
 
     {
