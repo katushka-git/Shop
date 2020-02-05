@@ -9,7 +9,7 @@ namespace MyReklama.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public double Price { get; set; }
+        public int Price { get; set; }
 
         public ICollection<Order> Orders { get; set; }
         public Service()

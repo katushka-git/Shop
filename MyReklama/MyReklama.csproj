@@ -203,6 +203,10 @@
     </Compile>
     <Compile Include="Logic\ForCreateOreder.cs" />
     <Compile Include="Logic\Statistic.cs" />
+    <Compile Include="Migrations\202002051116477_m11.cs" />
+    <Compile Include="Migrations\202002051116477_m11.Designer.cs">
+      <DependentUpon>202002051116477_m11.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\View\ServiceItemView.cs" />
     <Compile Include="Migrations\202001271120469_m1.cs" />
     <Compile Include="Migrations\202001271120469_m1.Designer.cs">
@@ -296,7 +300,7 @@
     <Content Include="Views\Services\Details.cshtml" />
     <Content Include="Views\Services\Edit.cshtml" />
     <Content Include="Views\Services\Index.cshtml" />
-    <Content Include="Views\Report\Index.cshtml" />
+    <Content Include="Views\Statistica\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutA.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -318,6 +322,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202001271120469_m1.resx">
       <DependentUpon>202001271120469_m1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002051116477_m11.resx">
+      <DependentUpon>202002051116477_m11.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

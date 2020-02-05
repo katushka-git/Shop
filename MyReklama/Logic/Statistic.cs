@@ -20,7 +20,7 @@ namespace MyReklama.Logic
             MyService = new ServiceView();
 
         }
-
+        
         public ServiceView getServiceResult()
 
         {
@@ -32,7 +32,9 @@ namespace MyReklama.Logic
             MyService.clientList = db.Orders.GroupBy(item1 => item1.Client).Select(item => new ServiceItemView() { Name = item.Key.FIO, Count = item.Count() }).ToList();
 
             MyService.userList = db.Orders.GroupBy(item1 => item1.Employee).Select(item => new ServiceItemView() { Name = item.Key.FIO, Count = item.Count() }).ToList();
-
+            //MyService.serviceList = db.Services.GroupBy(item1 => item1.Price).Select(item => new ServiceItemView() { Sum = item.Sum() });
+            //MyService.serviceList = db.Services.Where(x=>x.Price!=0).Sum(); 
+            MyService.SumPrice = db.Services.Sum(x=>x.Price);
             return MyService;
         }
     }

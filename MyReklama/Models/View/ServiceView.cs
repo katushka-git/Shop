@@ -16,6 +16,7 @@ namespace MyReklama.Models.View
         public List<ServiceItemView> userList { get; set; }
 
         public List<ServiceItemView> clientList { get; set; }
+        public double SumPrice { get; set; }
 
     }
 
