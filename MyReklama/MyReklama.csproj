@@ -197,6 +197,7 @@
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
+    <Compile Include="Controllers\ServicesListController.cs" />
     <Compile Include="Controllers\StatisticaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -302,6 +303,12 @@
     <Content Include="Views\Services\Index.cshtml" />
     <Content Include="Views\Statistica\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutA.cshtml" />
+    <Content Include="Views\Services\ListService.cshtml" />
+    <Content Include="Views\ServicesList\Create.cshtml" />
+    <Content Include="Views\ServicesList\Delete.cshtml" />
+    <Content Include="Views\ServicesList\Details.cshtml" />
+    <Content Include="Views\ServicesList\Edit.cshtml" />
+    <Content Include="Views\ServicesList\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

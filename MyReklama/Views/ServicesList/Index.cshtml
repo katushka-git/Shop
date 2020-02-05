@@ -1,0 +1,41 @@
+﻿@model IEnumerable<MyReklama.Models.Service>
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<p><h2>Список предоставляемых услуг</h2></p>
+
+<body>
+    
+    <table class="table">
+        <tr>
+            <th>
+              Наименование услуги
+            </th>
+            <th>
+               Цена $
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+           
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
