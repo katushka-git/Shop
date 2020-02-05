@@ -10,8 +10,7 @@ namespace MyReklama.Models.View
     public class ServiceView
 
     {
-        public string Name { get; set; }
-        public int Count { get; set; }
+
         public List<ServiceItemView> serviceList { get; set; }
 
         public List<ServiceItemView> userList { get; set; }

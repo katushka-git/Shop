@@ -10,14 +10,23 @@ namespace MyReklama.Controllers
     public class StatisticaController : Controller
     {
         Statistic stat;
+
         public StatisticaController()
+
         {
+
             stat = new Statistic();
+
         }
+
         // GET: Statistica
+
         public ActionResult Index()
+
         {
-            return View(stat.getListServices());
+
+            return View(stat.getServiceResult());
+
         }
     }
 }
