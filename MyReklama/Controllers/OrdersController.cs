@@ -55,6 +55,8 @@ namespace MyReklama.Controllers
         {
             if (ModelState.IsValid)
             {
+                var f = new DateTime();
+                order.DateOrder= DateTime.Now;
                 db.Orders.Add(order);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");

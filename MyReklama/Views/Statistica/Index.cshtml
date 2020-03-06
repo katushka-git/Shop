@@ -1,4 +1,4 @@
-﻿@using MyReklama.Logic;
+﻿
 @using MyReklama.Models.View;
 
 @model ServiceView
@@ -12,7 +12,7 @@
 
 }
 
-<h2>Количество оказанных услуг</h2>
+<h2>Количество оказанных услуг:</h2>
 
 @foreach (var item in Model.serviceList)
 
@@ -22,7 +22,7 @@
 
 }
 
-<h2>Клиенты заказавшие больше услуг</h2>
+<h2>Список клиентов и колличество, заказанных ими услуг:</h2>
 
 @foreach (var item in Model.clientList)
 
@@ -32,7 +32,7 @@
 
 }
 
-<h2>Работники оказавшие больше услуг</h2>
+<h2>Работники,оказавшие больше услуг:</h2>
 
 @foreach (var item in Model.userList)
 
