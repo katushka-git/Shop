@@ -208,6 +208,12 @@
     <Compile Include="Migrations\202002051116477_m11.Designer.cs">
       <DependentUpon>202002051116477_m11.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003110627263_с1.cs" />
+    <Compile Include="Migrations\202003110627263_с1.Designer.cs">
+      <DependentUpon>202003110627263_с1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BodyOrder.cs" />
+    <Compile Include="Models\HeadOrder.cs" />
     <Compile Include="Models\View\ServiceItemView.cs" />
     <Compile Include="Migrations\202001271120469_m1.cs" />
     <Compile Include="Migrations\202001271120469_m1.Designer.cs">
@@ -332,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002051116477_m11.resx">
       <DependentUpon>202002051116477_m11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003110627263_с1.resx">
+      <DependentUpon>202003110627263_с1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
