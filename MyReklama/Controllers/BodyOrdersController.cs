@@ -47,7 +47,7 @@ namespace MyReklama.Controllers
         // сведения см. в статье https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Id,OrderId,ServiceId,Price,Count,Sum")] BodyOrder bodyOrder)
+        public async Task<ActionResult> Create([Bind(Include = "Id,HeadOrderId,ServiceId,Price,Count,Sum")] BodyOrder bodyOrder)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace MyReklama.Controllers
         // сведения см. в статье https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,OrderId,ServiceId,Price,Count,Sum")] BodyOrder bodyOrder)
+        public async Task<ActionResult> Edit([Bind(Include = "Id,HeadOrderId,ServiceId,Price,Count,Sum")] BodyOrder bodyOrder)
         {
             if (ModelState.IsValid)
             {
