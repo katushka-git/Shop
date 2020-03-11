@@ -17,8 +17,5 @@ namespace MyReklama.Models
             public DbSet<Employee> Employees { get; set; }
             public DbSet<Order> Orders { get; set; }
             public DbSet<Service> Services { get; set; }
-        public DbSet<BodyOrder> BodyOrders { get; set; }
-        public DbSet<HeadOrder> HeadOrders { get; set; }
-
+        }
     }
-}
