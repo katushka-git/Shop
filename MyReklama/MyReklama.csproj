@@ -190,8 +190,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BodyOrdersController.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
+    <Compile Include="Controllers\HeadOrdersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
@@ -315,6 +317,16 @@
     <Content Include="Views\ServicesList\Details.cshtml" />
     <Content Include="Views\ServicesList\Edit.cshtml" />
     <Content Include="Views\ServicesList\Index.cshtml" />
+    <Content Include="Views\BodyOrders\Create.cshtml" />
+    <Content Include="Views\BodyOrders\Delete.cshtml" />
+    <Content Include="Views\BodyOrders\Details.cshtml" />
+    <Content Include="Views\BodyOrders\Edit.cshtml" />
+    <Content Include="Views\BodyOrders\Index.cshtml" />
+    <Content Include="Views\HeadOrders\Create.cshtml" />
+    <Content Include="Views\HeadOrders\Delete.cshtml" />
+    <Content Include="Views\HeadOrders\Details.cshtml" />
+    <Content Include="Views\HeadOrders\Edit.cshtml" />
+    <Content Include="Views\HeadOrders\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
