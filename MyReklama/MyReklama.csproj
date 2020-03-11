@@ -190,10 +190,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\BodyOrdersController.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
-    <Compile Include="Controllers\HeadOrdersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
@@ -206,14 +204,16 @@
     </Compile>
     <Compile Include="Logic\ForCreateOreder.cs" />
     <Compile Include="Logic\Statistic.cs" />
-    <Compile Include="Migrations\202003060735146_m10.cs" />
-    <Compile Include="Migrations\202003060735146_m10.Designer.cs">
-      <DependentUpon>202003060735146_m10.cs</DependentUpon>
+    <Compile Include="Migrations\202002051116477_m11.cs" />
+    <Compile Include="Migrations\202002051116477_m11.Designer.cs">
+      <DependentUpon>202002051116477_m11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\View\ServiceItemView.cs" />
+    <Compile Include="Migrations\202001271120469_m1.cs" />
+    <Compile Include="Migrations\202001271120469_m1.Designer.cs">
+      <DependentUpon>202001271120469_m1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\BodyOrder.cs" />
-    <Compile Include="Models\HeadOrder.cs" />
-    <Compile Include="Models\View\ServiceItemView.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Employee.cs" />
@@ -309,16 +309,6 @@
     <Content Include="Views\ServicesList\Details.cshtml" />
     <Content Include="Views\ServicesList\Edit.cshtml" />
     <Content Include="Views\ServicesList\Index.cshtml" />
-    <Content Include="Views\BodyOrders\Create.cshtml" />
-    <Content Include="Views\BodyOrders\Delete.cshtml" />
-    <Content Include="Views\BodyOrders\Details.cshtml" />
-    <Content Include="Views\BodyOrders\Edit.cshtml" />
-    <Content Include="Views\BodyOrders\Index.cshtml" />
-    <Content Include="Views\HeadOrders\Create.cshtml" />
-    <Content Include="Views\HeadOrders\Delete.cshtml" />
-    <Content Include="Views\HeadOrders\Details.cshtml" />
-    <Content Include="Views\HeadOrders\Edit.cshtml" />
-    <Content Include="Views\HeadOrders\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -337,8 +327,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202003060735146_m10.resx">
-      <DependentUpon>202003060735146_m10.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202001271120469_m1.resx">
+      <DependentUpon>202001271120469_m1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002051116477_m11.resx">
+      <DependentUpon>202002051116477_m11.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -6,19 +6,16 @@ using System.Web;
 
 namespace MyReklama.Models
 {
+   
+        public class MyAppContext : DbContext
+        {
+            public MyAppContext()
+                : base("DbConnection")
+            { }
 
-    public class MyAppContext : DbContext
-    {
-        public MyAppContext()
-            : base("DbConnection")
-        { }
-
-        public DbSet<Client> Clients { get; set; }
-        public DbSet<Employee> Employees { get; set; }
-        public DbSet<Order> Orders { get; set; }
-        public DbSet<Service> Services { get; set; }
-        public DbSet<BodyOrder> BodyOrders { get; set; }
-        public DbSet<HeadOrder> HeadOrders { get; set; }
-
+            public DbSet<Client> Clients { get; set; }
+            public DbSet<Employee> Employees { get; set; }
+            public DbSet<Order> Orders { get; set; }
+            public DbSet<Service> Services { get; set; }
+        }
     }
-}

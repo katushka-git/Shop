@@ -7,13 +7,13 @@ namespace MyReklama.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class m10 : IMigrationMetadata
+    public sealed partial class m11 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(m10));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(m11));
         
         string IMigrationMetadata.Id
         {
-            get { return "202003060735146_m10"; }
+            get { return "202002051116477_m11"; }
         }
         
         string IMigrationMetadata.Source
