@@ -14,7 +14,7 @@ namespace MyReklama.Models
         public int ClientId { get; set; }
         //public Client Client { get; set; }
         public int Sum { get; set; }
-        public ICollection<BodyOrder> BodyOrders { get; set; }
+        public virtual ICollection<BodyOrder> BodyOrders { get; set; }
         public HeadOrder()
         {
             BodyOrders = new List<BodyOrder>();

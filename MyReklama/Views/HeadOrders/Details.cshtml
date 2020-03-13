@@ -44,6 +44,14 @@
 
     </dl>
 </div>
+<table>
+    <tr><td>id</td><td>Service</td><td>price</td><td>count</td><td>sum</td></tr>
+    @{foreach (var item in Model.BodyOrders)
+    {
+        <tr><td>@item.Id</td><td>@item.Service.Name</td><td>@item.Price</td><td>@item.Count</td><td>@(item.Price*item.Count)</td></tr>
+    }}
+
+</table>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")

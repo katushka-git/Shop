@@ -14,7 +14,9 @@
 <body>
     
     <table class="table">
-        <tr>
+        <tr><th>
+   №
+</th>
             <th>
               Наименование услуги
             </th>
@@ -25,7 +27,9 @@
         </tr>
     
     @foreach (var item in Model) {
-        <tr>
+        <tr><td>
+    @Html.DisplayFor(modelItem => item.Id)
+</td>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
