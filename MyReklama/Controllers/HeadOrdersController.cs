@@ -29,6 +29,7 @@ namespace MyReklama.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             HeadOrder headOrder = await db.HeadOrders.FindAsync(id);
+           
             if (headOrder == null)
             {
                 return HttpNotFound();

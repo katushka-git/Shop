@@ -222,6 +222,10 @@
     <Compile Include="Migrations\202003110720141_add в боди ордер сервис.Designer.cs">
       <DependentUpon>202003110720141_add в боди ордер сервис.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003130623297_service.cs" />
+    <Compile Include="Migrations\202003130623297_service.Designer.cs">
+      <DependentUpon>202003130623297_service.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\BodyOrder.cs" />
     <Compile Include="Models\HeadOrder.cs" />
     <Compile Include="Models\View\ServiceItemView.cs" />
@@ -367,6 +371,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003110720141_add в боди ордер сервис.resx">
       <DependentUpon>202003110720141_add в боди ордер сервис.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003130623297_service.resx">
+      <DependentUpon>202003130623297_service.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
