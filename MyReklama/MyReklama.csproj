@@ -204,6 +204,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\PagingHelpers.cs" />
     <Compile Include="Logic\ForCreateOreder.cs" />
     <Compile Include="Logic\Statistic.cs" />
     <Compile Include="Migrations\202002051116477_m11.cs" />
@@ -228,6 +229,7 @@
     </Compile>
     <Compile Include="Models\BodyOrder.cs" />
     <Compile Include="Models\HeadOrder.cs" />
+    <Compile Include="Models\PageInfo.cs" />
     <Compile Include="Models\View\ServiceItemView.cs" />
     <Compile Include="Migrations\202001271120469_m1.cs" />
     <Compile Include="Migrations\202001271120469_m1.Designer.cs">

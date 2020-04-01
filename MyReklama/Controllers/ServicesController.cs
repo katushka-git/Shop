@@ -16,9 +16,13 @@ namespace MyReklama.Controllers
         private MyAppContext db = new MyAppContext();
 
         // GET: Services
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult> Index(int page = 1)
         {
-            return View(await db.Services.ToListAsync());
+            int pageSize = 3; // количество объектов на страницу
+            IEnumerable<Service> phonesPerPages = db.Services.OrderBy(x=>x.Name).Skip((page - 1) * pageSize).Take(pageSize);
+            PageInfo pageInfo = new PageInfo { PageNumber = page, PageSize = pageSize };
+            IndexViewModel2 ivm = new IndexViewModel2 { PageInfo = pageInfo, Service = phonesPerPages };
+            return View(ivm);
         }
 
         // GET: Services/Details/5
