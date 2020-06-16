@@ -53,7 +53,9 @@
             <div class="form-group">
                 <span class="control-label col-md-2">Город </span>
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
+                    @*@Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
+                    *@
+                    @Html.DropDownList("city", new SelectList(new string[] { "Тирасполь", "Бендеры", "Дубоссары", "Григориополь", "Каменка","Днестровск"}), htmlAttributes: new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -61,7 +63,7 @@
             <div class="form-group">
                 <span class="control-label col-md-2">Индекс </span>
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.Index, new { htmlAttributes = new { @class = "form-control" } })
+                     @Html.DropDownList("city", new SelectList(new string[] { "3300", "3200", "5700", "4000", "3352","6600"}), htmlAttributes: new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.Index, "", new { @class = "text-danger" })
                 </div>
             </div>
