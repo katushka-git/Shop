@@ -6,14 +6,14 @@ namespace MyReklama.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class с2 : IMigrationMetadata
+    [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
+    public sealed partial class AddCompanyMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(с2));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddCompanyMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "202003110636162_с2"; }
+            get { return "202006161033153_AddCompanyMigration"; }
         }
         
         string IMigrationMetadata.Source
