@@ -18,12 +18,14 @@ namespace MyReklama.Controllers
         // GET: Services
         public async Task<ActionResult> Index(int page = 1)
         {
-            int pageSize = 3; // количество объектов на страницу
-            IEnumerable<Service> phonesPerPages = db.Services.OrderBy(x=>x.Name).Skip((page - 1) * pageSize).Take(pageSize);
-            PageInfo pageInfo = new PageInfo { PageNumber = page, PageSize = pageSize };
-            IndexViewModel2 ivm = new IndexViewModel2 { PageInfo = pageInfo, Service = phonesPerPages };
+            var service = db.Services.ToList();
+            int pageSize = 10; // количество объектов на страницу
+            IEnumerable<Service> servicePerPages = service.Skip((page - 1) * pageSize).Take(pageSize);
+            PageInfo pageInfo = new PageInfo { PageNumber = page, PageSize = pageSize, TotalItems = service.Count };
+            IndexViewModel2 ivm = new IndexViewModel2 { PageInfo = pageInfo, Service = servicePerPages };
             return View(ivm);
         }
+
 
         // GET: Services/Details/5
         public async Task<ActionResult> Details(int? id)

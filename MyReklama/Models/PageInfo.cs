@@ -18,6 +18,8 @@ namespace MyReklama.Models
     public class IndexViewModel2
     {
         public IEnumerable<Service> Service { get; set; }
+        public IEnumerable<Client> Client { get; set; }
+        public IEnumerable<Employee> Employee { get; set; }
         public PageInfo PageInfo { get; set; }
     }
 }

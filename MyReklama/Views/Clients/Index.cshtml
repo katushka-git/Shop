@@ -1,4 +1,6 @@
-﻿@model IEnumerable<MyReklama.Models.Client>
+﻿@model MyReklama.Models.IndexViewModel2
+@using MyReklama.Helpers
+
 
 
 <!DOCTYPE html>
@@ -29,7 +31,7 @@
             <th></th>
         </tr>
 
-        @foreach (var item in Model)
+        @foreach (var item in Model.Client)
         {
             <tr>
                 <td>
@@ -52,6 +54,8 @@
         }
 
     </table>
-    
+    <div class="btn-group">
+        @Html.PageLinks(Model.PageInfo, x => Url.Action("Index", new { page = x }))
+    </div>
 </body>
 </html>
