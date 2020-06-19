@@ -16,14 +16,33 @@ namespace MyReklama.Controllers
         private MyAppContext db = new MyAppContext();
 
         // GET: Services
-        public async Task<ActionResult> Index(int page = 1)
+        public async Task<ActionResult> Index(string name, int page = 1)
         {
             var service = db.Services.ToList();
+            //IQueryable<Service> serv = db.Services.Include(p => p.Name);
             int pageSize = 10; // количество объектов на страницу
             IEnumerable<Service> servicePerPages = service.Skip((page - 1) * pageSize).Take(pageSize);
             PageInfo pageInfo = new PageInfo { PageNumber = page, PageSize = pageSize, TotalItems = service.Count };
-            IndexViewModel2 ivm = new IndexViewModel2 { PageInfo = pageInfo, Service = servicePerPages };
+            //if (!String.IsNullOrEmpty(name) && !name.Equals("Все"))
+            //{
+            //    serv = serv.Where(p => p.Name == name);
+            //}
+
+            //List<Service> services = db.Services.ToList();
+            //// устанавливаем начальный элемент, который позволит выбрать всех
+            //services.Insert(0, new Service { Name = "Все", Id = 0 });
+
+            IndexViewModel2 ivm = new IndexViewModel2 {
+                PageInfo = pageInfo,
+                Service = servicePerPages,
+               /* Name = new SelectList(serv, "Id", "Name") */};
             return View(ivm);
+        }
+        public ActionResult SortName()
+        {
+            var service = db.Services.OrderBy(x = x.Name);
+
+            return View(service);
         }
 
 
