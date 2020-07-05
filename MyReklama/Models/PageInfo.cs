@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
 
 namespace MyReklama.Models
 {
@@ -19,7 +18,6 @@ namespace MyReklama.Models
     public class IndexViewModel2
     {
         public IEnumerable<Service> Service { get; set; }
-        public SelectList Name { get; set; }
         public IEnumerable<Client> Client { get; set; }
         public IEnumerable<Employee> Employee { get; set; }
         public PageInfo PageInfo { get; set; }
