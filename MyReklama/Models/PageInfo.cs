@@ -20,6 +20,8 @@ namespace MyReklama.Models
         public IEnumerable<Service> Service { get; set; }
         public IEnumerable<Client> Client { get; set; }
         public IEnumerable<Employee> Employee { get; set; }
+        public IEnumerable<Order> Orders { get; set; }
         public PageInfo PageInfo { get; set; }
+        public List<Service> Serlist { get; internal set; }
     }
 }

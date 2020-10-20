@@ -16,14 +16,35 @@ namespace MyReklama.Controllers
         private MyAppContext db = new MyAppContext();
 
         // GET: Services
-        public async Task<ActionResult> Index(int page = 1)
+        public async Task<ActionResult> Index(string sortOrder, int page =1)
         {
             var service = db.Services.ToList();
             int pageSize = 10; // количество объектов на страницу
             IEnumerable<Service> servicePerPages = service.Skip((page - 1) * pageSize).Take(pageSize);
             PageInfo pageInfo = new PageInfo { PageNumber = page, PageSize = pageSize, TotalItems = service.Count };
-            IndexViewModel2 ivm = new IndexViewModel2 { PageInfo = pageInfo, Service = servicePerPages };
-            return View(ivm);
+            
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "Name desc" : "";
+            ViewBag.DateSortParm = sortOrder == "Date" ? "Date desc" : "Date";
+            var serv = from s in db.Services
+                           select s;
+            switch (sortOrder)
+            {
+                case "Name desc":
+                    serv = serv.OrderByDescending(s => s.Name);
+                    break;
+                case "Date":
+                    serv = serv.OrderBy(s => s.Price);
+                    break;
+                case "Date desc":
+                    serv = serv.OrderByDescending(s => s.Price);
+                    break;
+                default:
+                    serv = serv.OrderBy(s => s.Name);
+                    break;
+            }
+            var serlist = serv.ToList();
+            IndexViewModel2 ivm = new IndexViewModel2 { PageInfo = pageInfo, Service = servicePerPages, Serlist = serlist };
+            return View(serlist);
         }
 
 

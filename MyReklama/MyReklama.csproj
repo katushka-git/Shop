@@ -203,6 +203,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
+    <Compile Include="Controllers\OrderViewController.cs" />
     <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Controllers\ServicesListController.cs" />
@@ -220,6 +221,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BodyOrder.cs" />
     <Compile Include="Models\HeadOrder.cs" />
+    <Compile Include="Models\OrdersListViewModel.cs" />
     <Compile Include="Models\PageInfo.cs" />
     <Compile Include="Models\View\ServiceItemView.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -238,6 +240,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\PagedList.css" />
+    <Content Include="Content\pagin.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -328,6 +331,7 @@
     <Content Include="Views\BodyOrders\Details.cshtml" />
     <Content Include="Views\BodyOrders\Edit.cshtml" />
     <Content Include="Views\BodyOrders\Index.cshtml" />
+    <Content Include="Views\OrderView\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

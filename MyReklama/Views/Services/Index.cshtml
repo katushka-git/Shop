@@ -1,7 +1,7 @@
-﻿@model MyReklama.Models.IndexViewModel2
-@using MyReklama.Helpers
-
-
+﻿
+@model IEnumerable<MyReklama.Models.Service>
+@*@model MyReklama.Models.IndexViewModel2
+@using MyReklama.Helpers*@
 
 <!DOCTYPE html>
 
@@ -18,15 +18,15 @@
     <table class="table">
         <tr>
             <th>
-                Наименование услуги
+                @Html.ActionLink("Наименование", "Index", new { sortOrder = ViewBag.NameSortParm })
             </th>
             <th>
-                Цена
+                @Html.ActionLink("Цена", "Index", new { sortOrder = ViewBag.DateSortParm })
             </th>
             <th></th>
         </tr>
 
-        @foreach (var item in Model.Service)
+        @foreach (var item in Model)
         {
             <tr>
                 <td>
@@ -44,8 +44,10 @@
         }
 
     </table>
+    
+    @*@using MyReklama.Helpers*@
     <div class="btn-group">
-        @Html.PageLinks(Model.PageInfo, x => Url.Action("Index", new { page = x }))
+        <img src="~/Content/pagin.png" width="70px"/>
     </div>
 </body>
 </html>

@@ -15,5 +15,6 @@ namespace MyReklama.Models
         {
             Orders = new List<Order>();
         }
+
     }
 }

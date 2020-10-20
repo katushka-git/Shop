@@ -16,11 +16,16 @@ namespace MyReklama.Controllers
         private MyAppContext db = new MyAppContext();
 
         // GET: Orders
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult> Index(int page =1)
         {
-            var orders = db.Orders.Include(o => o.Client).Include(o => o.Employee).Include(o => o.Service);
-            return View(await orders.ToListAsync());
-        }
+            var orders = db.Orders.Include(o => o.Client).Include(o => o.Employee).Include(o => o.Service).ToList();
+            int pageSize = 5; // количество объектов на страницу
+            IEnumerable<Order> orderPerPages = orders.Skip((page - 1) * pageSize).Take(pageSize);
+            PageInfo pageInfo = new PageInfo { PageNumber = page, PageSize = pageSize, TotalItems = orders.Count };
+            IndexViewModel2 ivm = new IndexViewModel2 { PageInfo = pageInfo, Orders = orderPerPages };
+            return View(ivm);
+
+                 }
 
         // GET: Orders/Details/5
         public async Task<ActionResult> Details(int? id)

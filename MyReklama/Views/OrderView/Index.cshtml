@@ -1,0 +1,62 @@
+﻿@model MyReklama.Models.OrdersListViewModel
+
+
+@{
+    ViewBag.Title = "OrderView";
+}
+
+@{
+    ViewBag.Title = "Каталог заказов";
+}
+
+<h2>Заказы</h2>
+
+<form method="get">
+    <div class="form-inline">
+        <label class="control-label">Услуга: </label>
+        @Html.DropDownList("service", Model.Services as SelectList,
+                    htmlAttributes: new { @class = "form-control" })
+
+        @*<label class="control-label">Заказ </label>
+        @Html.DropDownList("position", Model.Orders as SelectList,
+                htmlAttributes: new { @class = "form-control" })*@
+
+        <input type="submit" value="Фильтр" class="btn btn-default" />
+    </div>
+</form>
+<br />
+<table class="table">
+    <tr>
+        <th>клиент</th>
+        <th>сотрудник</th>
+        <th>услуга</th>
+        <th>дата</th>
+        
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Orders)
+    {
+    <tr>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Client.NameCompany)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee.FIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Service.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOrder)
+        </td>
+        <td>
+            @*@Html.ActionLink("Редактировать", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Удалить", "Delete", new { id = item.Id })*@
+        </td>
+    </tr>
+    }
+
+</table>
