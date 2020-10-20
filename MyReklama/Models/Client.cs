@@ -13,7 +13,7 @@ namespace MyReklama.Models
         public string Adres { get; set; }
         public int Tel { get; set; }
         public string City { get; set; }
-                public int Index { get; set; }
+         public int Index { get; set; }
 
         public ICollection<Order> Orders { get; set; }
 
